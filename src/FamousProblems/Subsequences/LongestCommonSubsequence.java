@@ -1,4 +1,4 @@
-package DynamicProgramming.TusharRoy;
+package FamousProblems.Subsequences;
 
 // https://leetcode.com/problems/longest-common-subsequence/
 public class LongestCommonSubsequence {

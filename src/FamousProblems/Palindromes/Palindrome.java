@@ -1,9 +1,8 @@
 package FamousProblems.Palindromes;
 
+
+//https://practice.geeksforgeeks.org/problems/form-a-palindrome1455/1/
 public class Palindrome {
-
-
-    //https://practice.geeksforgeeks.org/problems/form-a-palindrome1455/1/
     static int formPalindrome(String s)    {
         int n = s.length();
         int[][] dp = new int[n][n];

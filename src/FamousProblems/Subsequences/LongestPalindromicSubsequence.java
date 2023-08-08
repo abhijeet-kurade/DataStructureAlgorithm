@@ -1,4 +1,4 @@
-package FamousProblems.Palindromes;
+package FamousProblems.Subsequences;
 
 // https://leetcode.com/problems/longest-palindromic-subsequence/
 public class LongestPalindromicSubsequence {

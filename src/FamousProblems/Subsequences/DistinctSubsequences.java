@@ -1,5 +1,6 @@
 package FamousProblems.Subsequences;
 
+//https://leetcode.com/problems/distinct-subsequences/
 public class DistinctSubsequences {
     public int numDistinct(String s, String t) {
         int m = s.length();
