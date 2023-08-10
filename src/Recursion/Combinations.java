@@ -6,14 +6,7 @@ import java.util.Stack;
 
 public class Combinations {
     public static void main(String[] args) {
-        Stack stack = new Stack();
-        stack.add(4);
-        stack.add(14);
-        stack.add(2);
-        stack.add(41);
-        System.out.println(stack);
-        sortStack(stack);
-        System.out.println(stack);
+
     }
 
     public static List<List<Integer>> combinations(int[] arr, int target){
@@ -35,37 +28,4 @@ public class Combinations {
 
     }
 
-
-    public static void reverseStack(Stack<Integer> stack){
-        if(stack.isEmpty())return;
-        int val = stack.pop();
-        reverseStack(stack);
-        reverseStk(val, stack);
-    }
-
-    public static void reverseStk(int val, Stack<Integer> stack){
-        if(stack.isEmpty()){
-            stack.add(val);
-            return;
-        }
-        int temp = stack.pop();
-        reverseStk(val, stack);
-        stack.add(temp);
-    }
-
-    public static void sortStack(Stack<Integer> stack){
-        if(stack.isEmpty())return;
-        int val = stack.pop();
-        sortStack(stack);
-        sortStack(val, stack);
-    }
-    public static void sortStack(int val, Stack<Integer> stack){
-        if(stack.isEmpty() || val <= stack.peek()){
-            stack.add(val);
-            return;
-        }
-        int temp = stack.pop();
-        sortStack(val, stack);
-        stack.add(temp);
-    }
 }
