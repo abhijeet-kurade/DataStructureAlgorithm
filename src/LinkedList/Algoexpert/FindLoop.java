@@ -1,5 +1,7 @@
 package LinkedList.Algoexpert;
 
+import Utils.LinkedList;
+
 public class FindLoop {
     public static void main(String[] args) {
         int[] arr = {6,3,4,1,4,8,2};
@@ -46,12 +48,4 @@ public class FindLoop {
         return slow;
     }
 
-    static class LinkedList {
-        int value;
-        LinkedList next = null;
-
-        public LinkedList(int value) {
-            this.value = value;
-        }
-    }
 }

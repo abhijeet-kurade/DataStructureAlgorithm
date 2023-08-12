@@ -4,7 +4,6 @@ import java.util.*;
 
 public class FriApril1 {
 
-
     //https://leetcode.com/problems/roman-to-integer/
     public static int romanToInt(String number) {
         Map<Character, Integer> map = new HashMap<>();
@@ -30,7 +29,7 @@ public class FriApril1 {
     }
 
 
-    //https://practice.geeksforgeeks.org/problems/closest-strings0611/1/
+    // https://practice.geeksforgeeks.org/problems/closest-strings0611/1/
     public static int shortestDistance(ArrayList<String> s, String word1, String word2) {
         int M = Integer.MAX_VALUE;
         int idx1 = M, idx2 = M;

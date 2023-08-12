@@ -1,17 +1,10 @@
 package Trees.AlgoExpert;
 
+import Utils.AlgoExpert.BinaryTree;
+
 public class HeightBalancedBinaryTree {
     public static void main(String[] args) {
 
-    }
-    static class BinaryTree {
-        public int value;
-        public BinaryTree left = null;
-        public BinaryTree right = null;
-
-        public BinaryTree(int value) {
-            this.value = value;
-        }
     }
 
     // [first, second]    first is this subtree is balanced or not (0 = balanced 1 = unbalanced) second = height

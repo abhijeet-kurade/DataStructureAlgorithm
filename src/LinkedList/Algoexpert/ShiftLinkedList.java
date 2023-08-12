@@ -1,5 +1,7 @@
 package LinkedList.Algoexpert;
 
+import Utils.LinkedList;
+
 public class ShiftLinkedList {
     public static void main(String[] args) {
 
@@ -25,15 +27,5 @@ public class ShiftLinkedList {
         node.next = null;
 
         return newHead;
-    }
-
-    static class LinkedList {
-        public int value;
-        public LinkedList next;
-
-        public LinkedList(int value) {
-            this.value = value;
-            next = null;
-        }
     }
 }

@@ -1,5 +1,7 @@
 package LinkedList.Algoexpert;
 
+import Utils.LinkedList;
+
 public class ReverseLinkedList {
     public static void main(String[] args) {
 
@@ -18,14 +20,5 @@ public class ReverseLinkedList {
         node.next = prev;
 
         return node;
-    }
-
-    static class LinkedList {
-        int value;
-        LinkedList next = null;
-
-        public LinkedList(int value) {
-            this.value = value;
-        }
     }
 }

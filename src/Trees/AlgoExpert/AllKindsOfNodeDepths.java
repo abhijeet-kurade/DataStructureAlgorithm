@@ -1,5 +1,10 @@
 package Trees.AlgoExpert;
 
+import Utils.AlgoExpert.BinaryTree;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class AllKindsOfNodeDepths {
     public static void main(String[] args) {
 
@@ -18,15 +23,24 @@ public class AllKindsOfNodeDepths {
         return  left + contribution + right;
     }
 
-    static class BinaryTree {
-        int value;
-        BinaryTree left;
-        BinaryTree right;
 
-        public BinaryTree(int value) {
-            this.value = value;
-            left = null;
-            right = null;
+    public static int allKindsOfNodeDepths1(BinaryTree root) {
+        if(root == null) return 0;
+        Queue<BinaryTree> queue = new LinkedList<>();
+        int sum = 0;
+        int depth = -1;
+        queue.add(root);
+        while (!queue.isEmpty()){
+            depth += 1;
+            int size = queue.size();
+            for(int i=0; i<size; i++) {
+                int contribution = (depth * (depth + 1)) / 2;
+                sum += contribution;
+                BinaryTree node = queue.poll();
+                if (node.left != null) queue.add(node.left);
+                if (node.right !=null) queue.add(node.right);
+            }
         }
+        return sum;
     }
 }

@@ -1,5 +1,7 @@
 package Trees.AlgoExpert;
 
+import Utils.AlgoExpert.BinaryTree;
+
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -53,13 +55,4 @@ public class MaxPathSumInBinaryTree {
         return Math.max(getMaxPathSum(tree)[0], getMaxPathSum(tree)[1]);
     }
 
-    static class BinaryTree {
-        public int value;
-        public BinaryTree left;
-        public BinaryTree right;
-
-        public BinaryTree(int value) {
-            this.value = value;
-        }
-    }
 }

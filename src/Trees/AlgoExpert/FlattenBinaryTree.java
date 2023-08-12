@@ -1,5 +1,7 @@
 package Trees.AlgoExpert;
 
+import Utils.AlgoExpert.BinaryTree;
+
 public class FlattenBinaryTree {
     public static void main(String[] args) {
 
@@ -36,14 +38,4 @@ public class FlattenBinaryTree {
         node_two.left = node_one;
     }
 
-    // This is the class of the input root. Do not edit it.
-    static class BinaryTree {
-        int value;
-        BinaryTree left = null;
-        BinaryTree right = null;
-
-        public BinaryTree(int value) {
-            this.value = value;
-        }
-    }
 }

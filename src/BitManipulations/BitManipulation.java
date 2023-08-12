@@ -1,6 +1,32 @@
 package BitManipulations;
 
 public class BitManipulation {
+
+    /*
+
+        1) Reset the rightmost bit
+        X = X & (X - 1)
+
+        This is often used for things like binary lifting, Fenwick tree, etc.
+
+        2) Find the rightmost bit X = X & (-X)
+
+        Used in similar types of cases.
+
+        3) X is either A or B. Flip X.
+        X = (A ^ B) ^ X
+
+        In most scenarios, (A + B) - X can do the same. But doing XOR is fast and needs the same memory, so there is no risk of an overflow of addition.
+
+        4) Identity
+        A ^ B = (A | B) - (A & B)
+
+        5) Check if two values have opposite signs
+        (A ^ B) < 0
+
+        6) Checking if parity is the same
+        (A & 1) == (B & 1)
+     */
     public static void main(String[] args) {
         //int[] unique = twoNonRepeatingNumbers(new int[]{12,4,6,4,8,6,412,9,9,8}) ;
         // System.out.println(unique[0] +" "+unique[1]);
@@ -17,7 +43,11 @@ public class BitManipulation {
 
 //        int[] arr = {9,1,14,13,15};
 //        System.out.println(diffBits(arr));
-        System.out.println(oppositeSign(100, -200));
+          //System.out.println(oppositeSign(100, -200));
+        System.out.println(getBinaryRepresentation(3432));
+        //System.out.println(getBinaryRepresentation(~3432));
+        System.out.println(getBinaryRepresentation(-3432));
+        System.out.println(getBinaryRepresentation(3432 & (-3432)));
     }
     public static boolean oppositeSign(int num1, int num2){
 
@@ -121,7 +151,7 @@ public class BitManipulation {
             num = num >> 1;
             brep = String.valueOf(bit) + brep;
         }
-        System.out.println(brep);
+        //System.out.println(brep);
         return brep;
     }
     public static int flippedCount(int num1, int num2){

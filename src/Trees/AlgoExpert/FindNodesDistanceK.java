@@ -1,27 +1,13 @@
 package Trees.AlgoExpert;
 
+import Utils.AlgoExpert.BinaryTree;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class FindNodesDistanceK {
     public static void main(String[] args) {
 
-    }
-    static class BinaryTree {
-        public int value;
-        public BinaryTree left = null;
-        public BinaryTree right = null;
-
-        public BinaryTree(int value) {
-            this.value = value;
-        }
-
-        @Override
-        public String toString() {
-            return "BinaryTree{" +
-                    "value=" + value +
-                    '}';
-        }
     }
 
     public boolean buildMap(BinaryTree node, int target, HashMap<BinaryTree, Boolean> map){

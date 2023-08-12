@@ -1,21 +1,13 @@
 package Trees.AlgoExpert;
 
+import Utils.AlgoExpert.BinaryTree;
+
 import java.util.Stack;
 
 public class CompareLeafTraversal {
     public static void main(String[] args) {
 
     }
-    static class BinaryTree {
-        public int value;
-        public BinaryTree left = null;
-        public BinaryTree right = null;
-
-        public BinaryTree(int value) {
-            this.value = value;
-        }
-    }
-
     public boolean compareLeafTraversal(BinaryTree tree1, BinaryTree tree2) {
 
         Stack<BinaryTree> stack1 = new Stack<>();

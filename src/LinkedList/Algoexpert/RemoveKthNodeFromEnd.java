@@ -1,5 +1,7 @@
 package LinkedList.Algoexpert;
 
+import Utils.LinkedList;
+
 public class RemoveKthNodeFromEnd {
     public static void main(String[] args) {
 
@@ -22,12 +24,5 @@ public class RemoveKthNodeFromEnd {
         return;
     }
 
-    static class LinkedList {
-        int value;
-        LinkedList next = null;
 
-        public LinkedList(int value) {
-            this.value = value;
-        }
-    }
 }

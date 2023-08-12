@@ -1,17 +1,10 @@
 package LinkedList.Algoexpert;
 
+import Utils.LinkedList;
+
 public class SumOfLinkedLists {
     public static void main(String[] args) {
 
-    }
-    public static class LinkedList {
-        public int value;
-        public LinkedList next;
-
-        public LinkedList(int value) {
-            this.value = value;
-            this.next = null;
-        }
     }
 
     public LinkedList sumOfLinkedLists(LinkedList linkedListOne, LinkedList linkedListTwo) {

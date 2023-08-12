@@ -1,18 +1,11 @@
 package Trees.AlgoExpert;
 
+import Utils.AlgoExpert.BinaryTree;
+
 public class BinaryTreeDiameter {
     public static void main(String[] args) {
 
     }
-    static class BinaryTree {
-        public int value;
-        public BinaryTree left = null;
-        public BinaryTree right = null;
-        public BinaryTree(int value) {
-            this.value = value;
-        }
-    }
-
     public int[] getDiameter(BinaryTree node){
         if(node == null)
             return new int[]{0, 0}; // 1. dia 2. depth

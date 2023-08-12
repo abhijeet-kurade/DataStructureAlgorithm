@@ -1,5 +1,7 @@
 package Trees.AlgoExpert;
 
+import Utils.AlgoExpert.BinaryTree;
+
 public class NodeDepths {
     public static void main(String[] args) {
 
@@ -14,16 +16,5 @@ public class NodeDepths {
         int right =  modeDepthSum(node.right, depth+1) ;
         return depth + left + right;
 
-    }
-    static class BinaryTree {
-        int value;
-        BinaryTree left;
-        BinaryTree right;
-
-        public BinaryTree(int value) {
-            this.value = value;
-            left = null;
-            right = null;
-        }
     }
 }
