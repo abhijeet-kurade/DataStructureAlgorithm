@@ -5,7 +5,9 @@ import java.util.Queue;
 
 public class ShortestPath {
     public static void main(String[] args) {
-
+        for(char c = 'a'; c<= 'z'; c++){
+            System.out.println(c + " " +(int)(c));
+        }
     }
 
     public static int shortestPath(int[][] grid, int k){

@@ -1,4 +1,4 @@
-package DynamicProgramming.Striver;
+package DynamicProgramming.LeetcodeDP.OnStrings;
 
 import java.util.Arrays;
 

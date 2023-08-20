@@ -1,11 +1,13 @@
+package UnionFind;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
-public class MediaNETInterview {
+public class MinimumPointsNeededToConnectPoints {
     public static void main(String[] args) {
-        MediaNETInterview obj = new MediaNETInterview();
+        MinimumPointsNeededToConnectPoints obj = new MinimumPointsNeededToConnectPoints();
         int[][] points =  {
                 {-1, 1},
                 {1, 3},
