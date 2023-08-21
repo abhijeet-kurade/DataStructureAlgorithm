@@ -1,4 +1,4 @@
-package DynamicProgramming.LeetcodeDP.FibonacciNumber;
+package DynamicProgramming.LeetcodeDP.FibonacciStyle;
 
 public class FibonacciNumber {
 

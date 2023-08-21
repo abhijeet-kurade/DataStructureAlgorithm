@@ -1,4 +1,4 @@
-package DynamicProgramming.LeetcodeDP.FibonacciNumber;
+package DynamicProgramming.LeetcodeDP.FibonacciStyle;
 
 public class MinCostClimbingStairs {
     public int minCostClimbingStairs(int[] cost) {

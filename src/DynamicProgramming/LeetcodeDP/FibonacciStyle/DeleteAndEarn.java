@@ -1,4 +1,4 @@
-package DynamicProgramming.LeetcodeDP.FibonacciNumber;
+package DynamicProgramming.LeetcodeDP.FibonacciStyle;
 
 import java.util.Map;
 import java.util.TreeMap;
