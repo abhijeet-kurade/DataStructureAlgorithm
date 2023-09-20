@@ -1,5 +1,7 @@
 package BitManipulations;
 
+import java.util.Stack;
+
 public class BitManipulation {
 
     /*
@@ -216,5 +218,12 @@ public class BitManipulation {
             sum += ones * zeros;
         }
         return sum;
+    }
+
+    public int increasing(int [] arr){
+        Stack<Integer> stack = new Stack<>();
+
+
+        return -1;
     }
 }

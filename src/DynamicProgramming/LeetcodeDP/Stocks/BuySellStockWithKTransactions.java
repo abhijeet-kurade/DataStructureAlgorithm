@@ -2,8 +2,8 @@ package DynamicProgramming.LeetcodeDP.Stocks;
 
 public class BuySellStockWithKTransactions {
     public static void main(String[] args) {
-        int[] prices = {7, 1, 6, 3, 4, 5};
-        System.out.println(new Memoization().maxProfit(prices, 1));
+        int[] prices = {7, 1, 6, 3, 4, 7, 4, 9, 6, 15};
+        System.out.println(new Tabulation().maxProfit(prices, 4));
     }
 
     private static class Recursive{
@@ -73,10 +73,21 @@ public class BuySellStockWithKTransactions {
 
     private static class Tabulation{
 
-        public static int maxProfit(int[] prices, int k){
-
-            return -1;
+        public static int maxProfit(int[] prices, int k) {
+            int n = prices.length;
+            int[][] dp = new int[k+1][n];
+            for(int i=1; i<=k; i++){
+                int maxBuy = Integer.MIN_VALUE;
+                for(int j=1; j<n; j++){
+                    int lastPrice = prices[j-1];
+                    int currPrice = prices[j];
+                    maxBuy = Math.max(maxBuy, - lastPrice + dp[i-1][j-1]);
+                    dp[i][j] = Math.max(dp[i][j-1], maxBuy + currPrice);
+                }
+            }
+            return dp[k][n-1];
         }
+
 
     }
 }
