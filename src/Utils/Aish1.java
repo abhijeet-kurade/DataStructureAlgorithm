@@ -1,6 +1,7 @@
 package Utils;
 
 import java.util.*;
+import java.util.LinkedList;
 
 public class Aish1 {
     public static void main(String[] args) {
