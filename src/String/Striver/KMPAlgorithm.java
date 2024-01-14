@@ -2,13 +2,19 @@ package String.Striver;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 public class KMPAlgorithm {
 
     public static void main(String[] args) {
         System.out.println(KMP( "aefaefaefaedaefaedaefaefa", "aefaedaefaefa"));
         System.out.println(KMP_All("batmanandrobinarebat", "bat"));
+        Set<Integer> set = new HashSet<>();
+        new ArrayList<>(set);
     }
+
+
 
     public static void printArr(int[] arr){
         for(int num : arr) System.out.print(num +" ");
