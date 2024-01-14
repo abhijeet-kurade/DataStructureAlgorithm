@@ -1,4 +1,4 @@
-package Graphs.GraphStandardProblems;
+package Graphs.GraphStandardProblems.TopologicalSort;
 
 import java.util.*;
 

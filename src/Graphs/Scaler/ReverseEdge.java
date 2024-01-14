@@ -1,4 +1,4 @@
-package Graphs.GraphStandardProblems.Scaler;
+package Graphs.Scaler;
 
 import java.util.*;
 
