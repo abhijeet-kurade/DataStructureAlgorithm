@@ -2,15 +2,15 @@ package DynamicProgramming.LeetcodeDP.FibonacciStyle;
 
 public class FibonacciNumber {
 
-    public int climbStairs(int n) {
-        int step = 2;
-        int step_1 = 1, step_2 = 1;
-        while(step <= n){
-            int temp = step_1 + step_2;
-            step_1 = step_2;
-            step_2 = temp;
-            step += 1;
+    public int fib(int n) {
+        if(n == 0) return 0;
+        int last = 1, second_last = 0;
+
+        for(int i=2; i<=n; i++){
+            int curr = last + second_last;
+            second_last = last;
+            last = curr;
         }
-        return step_2;
+        return last;
     }
 }
