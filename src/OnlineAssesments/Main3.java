@@ -1,4 +1,4 @@
-package Utils;
+package OnlineAssesments;
 
 public class Main3 {
     public static void main(String[] args){

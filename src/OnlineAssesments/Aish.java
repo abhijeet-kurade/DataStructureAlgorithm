@@ -1,4 +1,4 @@
-package Utils;
+package OnlineAssesments;
 
 public class Aish {
     public static void main(String[] args) {

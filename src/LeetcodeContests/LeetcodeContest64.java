@@ -1,3 +1,5 @@
+package LeetcodeContests;
+
 import java.util.*;
 
 public class LeetcodeContest64 {

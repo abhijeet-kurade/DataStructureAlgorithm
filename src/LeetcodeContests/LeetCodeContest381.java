@@ -1,3 +1,5 @@
+package LeetcodeContests;
+
 import java.util.Arrays;
 
 public class LeetCodeContest381 {
