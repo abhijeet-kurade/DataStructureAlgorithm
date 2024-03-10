@@ -5,6 +5,30 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.TreeSet;
 
+/*
+The sweep line algorithm for detecting overlapping circles is generally more efficient than the simple approach of
+comparing every pair of circles because it reduces the number of comparisons that need to be made.
+In the simple approach, every circle is compared with every other circle, resulting in ( O(n^2) ) comparisons,
+where ( n ) is the number of circles.
+
+The sweep line algorithm improves on this by sorting the events (the start and end points of the circles along the x-axis)
+and then only considering circles that are active (those that have started but not yet ended as the sweep line moves).
+ While it still requires checking each new circle against all active circles, which can also lead to ( O(n^2) )
+ comparisons in the worst case, it often performs better in practice for several reasons:
+
+1. Early Termination: Circles that do not overlap along the x-axis can be quickly discarded without needing to
+                      check their y-coordinates or radii.
+2. Event Sorting: By processing circles in the order of their x-coordinates, the algorithm can efficiently manage the
+                      active set of circles, adding and removing circles as needed.
+3. Active Set Management: The active set typically contains fewer circles than the total set, especially if the circles
+                       are spread out along the x-axis, which reduces the number of comparisons.
+
+However, the efficiency gain depends on the distribution of the circles. If the circles are densely packed and many are
+overlapping, the sweep line algorithm may not offer a significant improvement over the simple pairwise comparison
+approach. For scenarios with a large number of circles or where circles are more sparsely distributed, the sweep line
+algorithm can provide a more scalable solution. Additionally, further optimizations, such as spatial partitioning
+techniques, can be applied to the sweep line algorithm to improve its performance in detecting overlapping circles.
+ */
 public class FindGroupsOfConnectedCircles {
     public static void main(String[] args) {
 
