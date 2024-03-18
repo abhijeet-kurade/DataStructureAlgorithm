@@ -3,11 +3,13 @@ package String.StringMatching;
 import Utils.Output;
 
 import java.util.Arrays;
+import java.util.regex.Pattern;
 
 public class KMP {
     public static void main(String[] args) {
-        Output.printArr(buildPattern("aefaedaefaefa"));
-        Output.printArr(buildPattern1("aefaedaefaefa"));
+        String str  = "aefaefaefaefdaefaeae", pattern = "aefaefdaefae";
+        Practice p = new Practice();
+        System.out.println(p.KMP(str, pattern));
     }
 
     public static int[] buildPattern1(String substring){
@@ -46,6 +48,44 @@ public class KMP {
         }
 
         return match;
+    }
+}
+
+class Practice{
+
+    public boolean KMP(String str, String pattern){
+        int n = str.length(), k = pattern.length();
+        int[] pat = new int[k];
+        Arrays.fill(pat, -1);
+
+        buildPattern(pattern, pat);
+
+        int i=0, j=0;
+
+        while(i < n){
+            char s = str.charAt(i);
+            char p = pattern.charAt(j);
+            if(s == p){
+                j += 1;
+                if(j == k) return true;
+            }
+            else{
+                j = pat[j-1] + 1;
+            }
+            i += 1;
+        }
+
+        return false;
+    }
+
+    public void buildPattern(String pattern, int[] pat){
+        int i = 0;
+        for(int j=1; j<pat.length; j++){
+            while(pattern.charAt(i) != pattern.charAt(j)){
+                i = pat[j-1] + 1;
+            }
+
+        }
     }
 }
 
