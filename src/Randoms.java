@@ -3,10 +3,12 @@ import java.util.List;
 
 public class Randoms {
     public static void main(String[] args) {
-        LinkedList<Integer> ll = new LinkedList<>();
+
+        System.out.println();
+        /*LinkedList<Integer> ll = new LinkedList<>();
         ll.add(new LinkedListNode<>(5));
         ll.add(new LinkedListNode<>(554));
-        ll.add(new LinkedListNode<>(55436));
+        ll.add(new LinkedListNode<>(55436));*/
     }
 
     public void fun(Room sd){

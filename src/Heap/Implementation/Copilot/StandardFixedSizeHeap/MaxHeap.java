@@ -1,11 +1,11 @@
 package Heap.Implementation.Copilot.StandardFixedSizeHeap;
 
-public class Heap {
+public class MaxHeap {
     private int[] heap;
     private int size;
     private int maxsize;
 
-    public Heap(int maxsize) {
+    public MaxHeap(int maxsize) {
         this.maxsize = maxsize;
         this.size = 0;
         this.heap = new int[this.maxsize+1];
@@ -23,8 +23,7 @@ public class Heap {
     }
 
     private boolean isLeaf(int pos){
-        if(pos > (size/2) && pos <= size) return true;
-        return false;
+        return pos > (size/2) && pos <= size;
     }
 
     private void swap(int i, int j){
