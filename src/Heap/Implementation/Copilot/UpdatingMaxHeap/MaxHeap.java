@@ -71,6 +71,9 @@ public class MaxHeap <T extends Comparable>{
     }
 
     public T extractMax(){
+        if(heap.size() <= 1){
+            throw new IllegalStateException("Heap is empty.");
+        }
         T element = heap.get(1);
         indices.remove(element);
         heap.set(1, heap.get(heap.size()-1));
@@ -84,6 +87,9 @@ public class MaxHeap <T extends Comparable>{
     }
 
     public void update(T element){
+        if(!contains(element)){
+            throw new IllegalStateException("Element does not exist.");
+        }
         T old = heap.get(indices.get(element));
         indices.put(element, indices.get(element));
         heap.set(indices.get(element), element);
