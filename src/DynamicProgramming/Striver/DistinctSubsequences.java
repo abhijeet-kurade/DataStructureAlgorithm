@@ -3,7 +3,10 @@ package DynamicProgramming.Striver;
 import java.util.Arrays;
 
 public class DistinctSubsequences {
-    public int numDistinct(String s, String t) {
+    public static void main(String[] args) {
+        System.out.println(numDistinct("", ""));
+    }
+    public static int numDistinct(String s, String t) {
         int m = t.length(), n = s.length();
 
         int[][] dp = new int[m+1][n+1];
