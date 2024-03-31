@@ -1,4 +1,4 @@
-package SegmentTree;
+package SegmentTree.RangeMax;
 
 public class RangeQueryForMaxNumberUsingNodeClass {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package SegmentTree;
+package SegmentTree.RangeSum.WithoutClass;
 
 public class SegmentTreeClass {
     public static void main(String[] args) {
