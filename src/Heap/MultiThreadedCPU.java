@@ -26,7 +26,10 @@ public class MultiThreadedCPU {
     public static int getTime(int[] threads, int tasks){
 
         int n = threads.length;
-        if(tasks <= n) return 0;
+        if(tasks <= n) {
+            Arrays.sort(threads);
+            return threads[tasks-1];
+        }
 
         int[] lcm = getTimeAfterLcm(threads, tasks);
 
