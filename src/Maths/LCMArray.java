@@ -1,4 +1,4 @@
-package Math;
+package Maths;
 
 public class LCMArray {
     // Function to find the greatest common divisor (GCD)

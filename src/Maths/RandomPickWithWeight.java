@@ -1,4 +1,4 @@
-package Math;
+package Maths;
 
 //https://leetcode.com/problems/random-pick-with-weight/
 

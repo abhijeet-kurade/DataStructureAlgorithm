@@ -1,4 +1,4 @@
-package Math;
+package Maths;
 
 public class GCDArray {
     // Function to find the greatest common divisor (GCD)

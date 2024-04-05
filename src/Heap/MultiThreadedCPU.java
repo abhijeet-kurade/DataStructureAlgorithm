@@ -1,5 +1,7 @@
 package Heap;
 
+import Maths.LCMArray;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -26,6 +28,10 @@ public class MultiThreadedCPU {
         int n = threads.length;
         if(tasks <= n) return 0;
 
+        int[] lcm = getTimeAfterLcm(threads, tasks);
+
+        tasks = lcm[0];
+
         PriorityQueue<Thread> threadPool = new PriorityQueue<>(
                 (o1, o2)-> {
                     if(o1.finish != o2.finish) return o1.finish - o2.finish;
@@ -50,6 +56,22 @@ public class MultiThreadedCPU {
                 currTime = threadPool.peek().finish;
             }
         }
-        return currTime;
+        return currTime+lcm[1];
+    }
+
+    public static int[] getTimeAfterLcm(int[] threads, int tasks){
+        int lcm = LCMArray.findLCM(threads);
+
+        int lcmTasks = 0;
+        for (int t : threads){
+            lcmTasks += lcm / t;
+        }
+        int cycles = tasks / lcmTasks;
+
+        int remainTasks = tasks - (cycles * lcmTasks);
+        int lcmTasksTime = lcm * cycles;
+
+        tasks = remainTasks;
+        return new int[]{tasks, lcmTasksTime};
     }
 }
