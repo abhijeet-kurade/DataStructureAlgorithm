@@ -53,13 +53,14 @@ public class MultiThreadedCPU {
                     thread.finish = currTime + thread.time;
                     threadPool.add(thread);
                     task += 1;
+                    if(task == tasks+1) return lcm[1]+thread.finish;
                 }
             }
             else {
                 currTime = threadPool.peek().finish;
             }
         }
-        return currTime+lcm[1];
+        return -1;
     }
 
     public static int[] getTimeAfterLcm(int[] threads, int tasks){
