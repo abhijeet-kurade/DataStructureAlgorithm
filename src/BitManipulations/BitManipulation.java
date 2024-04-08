@@ -43,13 +43,19 @@ public class BitManipulation {
         //getBinaryRepresentation(num);
         //getBinaryRepresentation(swapNibbles(num));
 
-//        int[] arr = {9,1,14,13,15};
-//        System.out.println(diffBits(arr));
-          //System.out.println(oppositeSign(100, -200));
+        /*int[] arr = {9,1,14,13,15};
+        System.out.println(diffBits(arr));
+        System.out.println(oppositeSign(100, -200));
         System.out.println(getBinaryRepresentation(3432));
-        //System.out.println(getBinaryRepresentation(~3432));
+        System.out.println(getBinaryRepresentation(~3432));
         System.out.println(getBinaryRepresentation(-3432));
-        System.out.println(getBinaryRepresentation(3432 & (-3432)));
+        System.out.println(getBinaryRepresentation(3432 & (-3432)));*/
+
+        int c = 0xffff;
+        System.out.println(getBinaryRepresentation(c));
+        System.out.println(getBinaryRepresentation(-c));
+
+        System.out.println(getBinaryRepresentation(c<<16));
     }
     public static boolean oppositeSign(int num1, int num2){
 
@@ -58,10 +64,6 @@ public class BitManipulation {
         int sign_bit = 1<<31;
         return ((num1&sign_bit)^(num2&sign_bit)) != 0;
     }
-
-    // DSA1 - Flatten the Tree, Array - find sqr
-    // DSA2 - add 1 in to string, OS qs mutex, semaphore, multithreading
-    // DSA3 - colorSort
 
     public static int[] twoNonRepeatingNumbers(int[] arr){
         int xor = 0;
