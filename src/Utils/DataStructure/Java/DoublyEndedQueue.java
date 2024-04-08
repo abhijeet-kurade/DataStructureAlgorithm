@@ -1,4 +1,4 @@
-package SlidingWindow;
+package Utils.DataStructure.Java;
 
 import java.util.Deque;
 import java.util.LinkedList;

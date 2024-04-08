@@ -9,15 +9,6 @@ public class MaxWindow {
     public static void main(String[] args) {
         int[] arr = {5, -1, 3, 3, 6, 5, 8, 7, 9};
         System.out.println(minMaxSumInWindow(arr, 3));
-
-        List<Integer> list = new ArrayList<>();
-        list.add(2);
-        list.add(1);
-        list.add(5);
-        System.out.println(list);
-        list.remove(0);
-        list.add(10);
-        System.out.println(list);
     }
 
     public static List<Integer> minMaxSumInWindow(int[] arr, int w){
