@@ -54,8 +54,8 @@ public class KMP {
 class Practice{
 
     public boolean KMP(String str, String pattern){
-        int n = str.length(), k = pattern.length();
-        int[] pat = new int[k];
+        int n = str.length(), m = pattern.length();
+        int[] pat = new int[m];
         Arrays.fill(pat, -1);
 
         buildPattern(pattern, pat);
@@ -67,7 +67,7 @@ class Practice{
             char p = pattern.charAt(j);
             if(s == p){
                 j += 1;
-                if(j == k) return true;
+                if(j == m) return true;
             }
             else{
                 j = pat[j-1] + 1;
