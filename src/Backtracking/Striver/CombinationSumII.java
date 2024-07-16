@@ -1,10 +1,15 @@
 package Backtracking.Striver;
 
+import jdk.jshell.execution.Util;
+
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class CombinationSumII {
     public static void main(String[] args) {
 
+        System.out.println(combinationSum2(new int[]{1,1,2,2,4,5}, 6));
     }
 
     /*
@@ -37,6 +42,42 @@ public class CombinationSumII {
     Explanation: These are the unique combinations whose sum is equal to target.
     * */
 
+
+    public static List<List<Integer>> combinationSum2(int[] arr, int target){
+        List<List<Integer>> sets = new ArrayList<>();
+        Arrays.sort(arr);
+        Utils.Output.printArr(arr);
+        combinationSum2(arr, 0, 0, target, sets, new ArrayList<>());
+        return sets;
+    }
+
+    public static void combinationSum2(int[] arr, int idx, int sum, int target, List<List<Integer>> sets, List<Integer> curr){
+        int n = arr.length;
+
+        if( sum > target) {
+            System.out.println(curr);
+            return;
+        }
+
+
+        if(sum == target){
+            System.out.println(curr);
+            sets.add(new ArrayList<>(curr));
+            return;
+        }
+
+
+        for(int i=idx; i<n; i++){
+            if(i != idx && arr[i] == arr[i-1]) continue;
+            //combinationSum2(arr, i, sum, target, sets, curr);
+
+            // take
+            curr.add(arr[i]);
+            //System.out.println(idx + " "+ i +" "+ (sum+arr[i]) +" "+ curr);
+            combinationSum2(arr, i+1, sum+arr[i], target, sets, curr);
+            curr.remove(curr.size()-1);
+        }
+    }
     public static ArrayList<ArrayList<Integer>> combinationSumII(int[] arr, int target){
 
         ArrayList<ArrayList<Integer>> sums = new ArrayList<>();

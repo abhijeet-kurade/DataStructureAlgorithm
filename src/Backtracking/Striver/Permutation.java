@@ -1,12 +1,21 @@
 package Backtracking.Striver;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Permutation {
     public static void main(String[] args) {
 
         System.out.println(stringPermutation("ABCD"));
     }
+
+
+
+    public static List<String> permute(char[] chars){
+        return null;
+    }
+
+
 
     public static ArrayList<String> stringPermutation(String str){
         ArrayList<String> permutations = new ArrayList<>();

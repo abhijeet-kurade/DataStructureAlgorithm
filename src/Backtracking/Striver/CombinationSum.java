@@ -1,6 +1,7 @@
 package Backtracking.Striver;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class CombinationSum {
     public static void main(String[] args) {
@@ -39,6 +40,29 @@ public class CombinationSum {
 
     * */
 
+    public static List<List<Integer>> combinationSum1(int[] arr, int target){
+        List<List<Integer>> sets = new ArrayList<>();
+        combinationSum1(arr, 0, target, 0, sets, new ArrayList<>());
+        return sets;
+    }
+
+    public static void combinationSum1(int[] arr, int idx, int target, int curr, List<List<Integer>> sets, List<Integer> set){
+        int n = arr.length;
+        if(idx >= n) return;
+        if(curr > target) return;
+        if(curr == target) {
+            sets.add(new ArrayList<>(set));
+            return;
+        }
+
+        combinationSum1(arr, idx+1, target, curr, sets, set);
+
+        set.add(arr[idx]);
+        curr += arr[idx];
+        combinationSum1(arr, idx, target, curr, sets, set);
+        set.remove(set.size()-1);
+        curr -= arr[idx];
+    }
     public static ArrayList<ArrayList<Integer>> combinationSum(int[] arr, int target){
 
         ArrayList<ArrayList<Integer>> sums = new ArrayList<>();
