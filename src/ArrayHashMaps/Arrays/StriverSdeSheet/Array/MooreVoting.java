@@ -13,6 +13,7 @@ public class MooreVoting {
         int count = 1;
         for(int i=1; i<arr.length; i++){
             if(count == 0) number = arr[i];
+
             if(arr[i] == number) count += 1;
             else count += -1;
         }

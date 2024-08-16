@@ -1,5 +1,6 @@
 package DynamicProgramming.LeetcodeDP.FibonacciStyle;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -28,5 +29,28 @@ public class DeleteAndEarn {
             last = num;
         }
         return Math.max(without, with);
+    }
+
+    public int deleteAndEarn1(int[] nums){
+        Map<Integer, Integer> map = new HashMap<>();
+        int max = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
+
+        for(int num : nums){
+            map.put(num, map.getOrDefault(num, 0)+num);
+            max = Math.max(max, num);
+            min = Math.min(min, num);
+        }
+
+        return deleteAndEarn(min, max, map);
+    }
+
+    private int deleteAndEarn(int curr, int max, Map<Integer, Integer> map){
+        if(curr > max) return 0;
+
+        int consider = map.getOrDefault(curr, 0) + deleteAndEarn(curr + 2, max, map);
+        int non = deleteAndEarn(curr + 1, max, map);
+
+        return Math.max(consider, non);
     }
 }

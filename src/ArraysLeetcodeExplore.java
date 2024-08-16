@@ -3,7 +3,56 @@ import java.util.List;
 
 public class ArraysLeetcodeExplore {
     public static void main(String[] args) {
-        findDisappearedNumbers(new int[]{4,3,2,7,8,2,3,1});
+        System.out.println(solution("11110"));
+
+    }
+
+
+
+    public static int solution(String s){
+        int ans = 0;
+         int start = -1;
+         for(int i=0; i<s.length(); i++){
+             if(s.charAt(i) == '1'){
+                 start = i;
+                 break;
+             }
+         }
+         if(start == -1) return 0;
+         for(int i=s.length()-1; i>=start; i--){
+             if(s.charAt(i) == '1'){
+                 ans += 2;
+             }
+             else ans += 1;
+         }
+         ans -= 1;
+        return ans;
+    }
+
+    public static boolean canScan(String n, String m){
+        int i=0, j=0;
+        int s1 = strLen(n), s2= strLen(m);
+
+        return false;
+    }
+
+    public static int strLen(String s){
+        int i = 0, ans = 0;
+        while (i < s.length()){
+            if(Character.isDigit(s.charAt(i))){
+                StringBuilder num = new StringBuilder();
+                while (i < s.length() && !Character.isDigit(s.charAt(i))){
+                    num.append(s.charAt(i));
+                    i += 1;
+                }
+                ans += Integer.parseInt(num.toString());
+            }
+            else {
+                ans += 1;
+                i += 1;
+            }
+        }
+        return ans;
     }
 
     public static void duplicateZeros(int[] arr) {

@@ -2,6 +2,21 @@ package DynamicProgramming.LeetcodeDP.FibonacciStyle;
 
 public class ClimbingStairs {
 
+    public int climbStairs1(int n){
+        return -1;
+
+
+    }
+
+    private void climb(int step, int last, int[] count){
+        if(step > last) return;
+        if(step == last) count[0] += 1;
+
+        climb(step+1, last, count);
+        climb(step+2, last, count);
+
+    }
+
     public int climbStairs(int n) {
 
         int step = 2;
