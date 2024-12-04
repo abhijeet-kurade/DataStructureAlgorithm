@@ -1,12 +1,15 @@
-package Amazon;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
+package InterviewExperiences.Amazon;
 
 public class Warehouse {
 
+    /*
+    * There is 1 Package Truck, 1 Warehouse, and N Lockers.
+    * Positions are represented on a 2-dimensional grid. Your goal is to find the minimal
+    * distance the truck driver needs to travel to collect returns packages from each
+    * Locker and deliver the returns back at the Warehouse. The truck driver may only
+    * visit one Locker at a time and must return to the Warehouse before visiting the
+    * next Locker. The truck moves up, down, left or right.
+    * */
     public int minDistance(int[] truck, int[] warehouse, int[][] lockers){
         int all_distance = 0;
         for(int[] locker : lockers){
